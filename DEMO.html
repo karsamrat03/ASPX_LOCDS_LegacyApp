@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOCDS - Loan Origination and Credit Decisioning System</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f5f5f5;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px 0;
+        margin-bottom: 30px;
+        border-radius: 8px;
+      }
+      header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+      header p {
+        font-size: 1.1em;
+        opacity: 0.9;
+      }
+      .status-badge {
+        display: inline-block;
+        padding: 8px 16px;
+        background: #ff6b6b;
+        color: white;
+        border-radius: 20px;
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      .status-badge.success {
+        background: #51cf66;
+      }
+      .section {
+        background: white;
+        margin: 20px 0;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #667eea;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #667eea;
+        padding-bottom: 10px;
+      }
+      h3 {
+        color: #764ba2;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      ul,
+      ol {
+        margin-left: 20px;
+      }
+      li {
+        margin: 8px 0;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
+      }
+      .feature-card {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+      }
+      .feature-card h4 {
+        color: #667eea;
+        margin-bottom: 10px;
+      }
+      code {
+        background: #f0f0f0;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+        font-size: 0.9em;
+      }
+      pre {
+        background: #2d2d2d;
+        color: #f8f8f2;
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 10px 0;
+        font-size: 0.9em;
+      }
+      .architecture {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: 20px 0;
+      }
+      .tech-stack {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .tech-stack h3 {
+        color: white;
+        border-color: white;
+      }
+      .tech-stack ul {
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .highlight {
+        background: #fff3cd;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 15px 0;
+        border-left: 4px solid #ffc107;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background: #f8f9fa;
+        font-weight: bold;
+        color: #667eea;
+      }
+      .file-tree {
+        background: #f0f0f0;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: monospace;
+        font-size: 0.9em;
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🏦 LOCDS</h1>
+        <p>Loan Origination and Credit Decisioning System</p>
+        <span class="status-badge"
+          >Application Built & Ready for Deployment</span
+        >
+      </header>
+
+      <div class="section">
+        <h2>📋 Application Overview</h2>
+        <p>
+          LOCDS is an enterprise-grade ASP.NET WebForms application for managing
+          loan applications, credit scoring, underwriting decisions, and loan
+          offers. The system implements industry best practices for security,
+          error handling, logging, and maintainability.
+        </p>
+        <div class="highlight">
+          <strong>✓ Status:</strong> Application built with security hardening,
+          error handling, IoC container, NUnit tests, and deployment artifacts.
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🏗️ System Architecture</h2>
+        <div class="architecture">
+          <div>
+            <h3>Layered Structure</h3>
+            <ul>
+              <li>
+                <strong>LOCDS.Web</strong> - ASP.NET WebForms UI + Security +
+                Global Error Handling
+              </li>
+              <li>
+                <strong>LOCDS.BLL</strong> - Business Services (Scoring,
+                Underwriting, Offers, Auditing)
+              </li>
+              <li>
+                <strong>LOCDS.DAL</strong> - Data Access & Repository Pattern
+              </li>
+              <li>
+                <strong>LOCDS.Common</strong> - Shared Constants, Enums,
+                Exceptions, Infrastructure
+              </li>
+              <li><strong>LOCDS.Entities</strong> - Domain Models</li>
+              <li><strong>LOCDS.Tests</strong> - NUnit + Moq Test Suite</li>
+            </ul>
+          </div>
+          <div class="tech-stack">
+            <h3>Technology Stack</h3>
+            <ul>
+              <li><strong>.NET Framework:</strong> 4.8</li>
+              <li><strong>Web Platform:</strong> ASP.NET WebForms</li>
+              <li><strong>Database:</strong> SQL Server</li>
+              <li><strong>DI Container:</strong> Unity IoC</li>
+              <li><strong>Logging:</strong> log4net</li>
+              <li><strong>Testing:</strong> NUnit + Moq</li>
+              <li><strong>Validation:</strong> FluentValidation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🔒 Security Features Implemented</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h4>✓ Role-Based Access Control</h4>
+            <p>
+              Custom HTTP module enforcing role-based authorization at request
+              level before page execution.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h4>✓ Anti-CSRF Protection</h4>
+            <p>
+              Cookie-backed token validation on all POST requests with
+              fixed-time comparison.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h4>✓ SQL Injection Prevention</h4>
+            <p>
+              Parameterized queries throughout DAL layer. AntiXss encoder
+              enabled in Web.config.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h4>✓ Session Fixation Prevention</h4>
+            <p>
+              Session ID regeneration after successful authentication via
+              SessionIDManager.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h4>✓ Data Masking</h4>
+            <p>
+              PAN and Aadhaar masking in UI output to protect sensitive
+              applicant data.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h4>✓ HTTPS + Security Headers</h4>
+            <p>
+              Automatic HTTPS redirect, X-Frame-Options, CSP, HSTS,
+              X-Content-Type-Options headers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🛠️ Enterprise Error Handling</h2>
+        <ul>
+          <li>
+            <strong>Global Exception Capture:</strong> Application_Error in
+            Global.asax catches unhandled exceptions
+          </li>
+          <li>
+            <strong>Correlation ID:</strong> AsyncLocal-backed context for
+            request tracing across layers
+          </li>
+          <li>
+            <strong>Branded Error Pages:</strong> Custom 403, 404, 500 pages
+            with bank branding
+          </li>
+          <li>
+            <strong>UpdatePanel Error Handling:</strong> Async postback errors
+            logged and user-friendly messages returned
+          </li>
+          <li>
+            <strong>Exception Hierarchy:</strong> Business exceptions
+            (AppException, LoanException, BureauException,
+            UnderwritingException)
+          </li>
+          <li>
+            <strong>Structured Logging:</strong> log4net with correlation ID,
+            user, session, URL, and timestamp in all entries
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>💉 Dependency Injection Setup</h2>
+        <h3>Unity IoC Container Registration</h3>
+        <table>
+          <tr>
+            <th>Component</th>
+            <th>Lifetime</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td>IUnitOfWork</td>
+            <td>PerRequest</td>
+            <td>Data access coordination per HTTP request</td>
+          </tr>
+          <tr>
+            <td>BLL Services (Scoring, Underwriting, Offers, etc.)</td>
+            <td>Transient</td>
+            <td>
+              New instance per resolution for thread-safe stateless operations
+            </td>
+          </tr>
+          <tr>
+            <td>IAuditService</td>
+            <td>Singleton</td>
+            <td>Centralized audit logging across application lifetime</td>
+          </tr>
+          <tr>
+            <td>ILoggerFactory</td>
+            <td>Singleton</td>
+            <td>Logging infrastructure</td>
+          </tr>
+          <tr>
+            <td>FluentValidation Validators</td>
+            <td>Transient</td>
+            <td>DTO validation on each use</td>
+          </tr>
+        </table>
+        <h3>WebForms Page Activation</h3>
+        <p>
+          Custom <code>UnityPageFactory</code> resolves ASPX code-behind
+          instances through Unity container, enabling constructor injection of
+          services directly in page classes.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>✅ NUnit Test Suite</h2>
+        <p><strong>Location:</strong> LOCDS/LOCDS.Tests/</p>
+        <h3>Test Classes & Method Names</h3>
+        <table>
+          <tr>
+            <th>Test Class</th>
+            <th>Test Methods</th>
+          </tr>
+          <tr>
+            <td><strong>CreditScoringServiceTests</strong></td>
+            <td>
+              <ul style="margin: 0; padding-left: 20px">
+                <li>Test_FOIR_Above65_ShouldReturn_AutoReject</li>
+                <li>Test_CreditScore_Below600_ShouldReturn_Reject</li>
+                <li>Test_PrimeApplicant_ShouldGet_LowestInterestRate</li>
+                <li>Test_BureauRetry_OnTransientFailure_ShouldSucceed</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>UnderwritingServiceTests</strong></td>
+            <td>
+              <ul style="margin: 0; padding-left: 20px">
+                <li>Test_ChainOfResponsibility_HardReject_StopsChain</li>
+                <li>Test_ConditionalApprove_Returns80PercentAmount</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>LoanOfferServiceTests</strong></td>
+            <td>
+              <ul style="margin: 0; padding-left: 20px">
+                <li>Test_EMI_Calculation_WithKnownValues</li>
+                <li>Test_OfferExpiry_After48Hours</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <p>
+          <strong>Mocking:</strong> All repository and external service
+          dependencies are mocked using Moq with strict MockBehavior.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>📦 Deployment Artifacts</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h4>Web.Release.config</h4>
+            <p>
+              XML transform for release build: connection string from
+              environment variable, debug=false, customErrors=On
+            </p>
+          </div>
+          <div class="feature-card">
+            <h4>scripts/deploy.ps1</h4>
+            <p>
+              PowerShell deployment: MSBuild publish, DB migrations, IIS site
+              sync, warm-up ping
+            </p>
+          </div>
+          <div class="feature-card">
+            <h4>health-check.aspx</h4>
+            <p>
+              JSON health endpoint returning {status, db-connectivity, version}
+            </p>
+          </div>
+          <div class="feature-card">
+            <h4>robots.txt & security.txt</h4>
+            <p>
+              Search engine guidance and security contact info for responsible
+              disclosure
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🚀 To Run This Application Locally</h2>
+        <h3>Prerequisites</h3>
+        <ul>
+          <li>Windows with .NET Framework 4.8</li>
+          <li>SQL Server (Express or higher)</li>
+          <li>IIS Express or IIS with ASP.NET 4.8 enabled</li>
+          <li>Visual Studio 2022 (or Build Tools + MSBuild)</li>
+        </ul>
+        <h3>Setup Steps</h3>
+        <ol>
+          <li>
+            <strong>Set connection string:</strong>
+            <pre>
+$env:LOCDS_CONNECTION_STRING = "Server=localhost;Database=LOCDS;Trusted_Connection=True;Encrypt=False;"</pre
+            >
+          </li>
+          <li>
+            <strong>Build the solution:</strong>
+            <pre>
+msbuild LOCDS.sln /p:Configuration=Debug /p:Platform="Any CPU" /v:minimal</pre
+            >
+          </li>
+          <li>
+            <strong>Run database migrations:</strong> Execute scripts in
+            LOCDS/LOCDS.DAL/Database/ in order
+          </li>
+          <li>
+            <strong>Run tests:</strong>
+            <pre>dotnet test LOCDS/LOCDS.Tests/LOCDS.Tests.csproj</pre>
+          </li>
+          <li>
+            <strong>Start IIS Express from Visual Studio:</strong> Open
+            LOCDS.sln in VS → Press F5 or use "Run"
+          </li>
+        </ol>
+        <h3>For Production Deployment</h3>
+        <pre>
+./scripts/deploy.ps1 -IisSiteName "Default Web Site/LOCDS" -Configuration Release</pre
+        >
+      </div>
+
+      <div class="section">
+        <h2>📁 Project Structure</h2>
+        <div class="file-tree">
+          LOCDS.sln README.md # Architecture & setup documentation LOCDS/ ├──
+          LOCDS.Web/ # ASP.NET WebForms UI │ ├── Global.asax(.cs) # Error
+          handling, correlation IDs │ ├── Web.config # Security & error
+          configuration │ ├── Web.Release.config # Release transforms │ ├──
+          health-check.aspx # JSON health endpoint │ ├── robots.txt │ ├──
+          security.txt │ ├── Dashboard.aspx(.cs) # Credit officer dashboard │
+          ├── LoanApplication.aspx(.cs) # Applicant wizard │ ├──
+          UnderwritingDecision.aspx # Underwriter decision sheet │ ├──
+          LoanOffer.aspx(.cs) # Offer presentation │ ├── Site.Master # Master
+          page with CSRF tokens │ ├── Errors/ # 403, 404, 500 branded pages │
+          ├── App_Start/ │ │ ├── UnityConfig.cs # IoC registration │ │ └──
+          UnityWebActivator.cs │ ├── Infrastructure/ │ │ ├── ErrorLogger.cs │ │
+          └── UnityPageFactory.cs # WebForms page activation │ └── Security/ │
+          ├── RoleBasedAuthorizationModule.cs │ ├── AntiCsrfTokenService.cs │
+          ├── AntiCsrfValidationModule.cs │ └── DataMasking.cs ├── LOCDS.BLL/ #
+          Business logic services │ ├── LoanApplicationService.cs │ ├──
+          CreditScoringService.cs │ ├── UnderwritingService.cs │ ├──
+          LoanOfferService.cs │ ├── AuditService.cs │ ├── DTOs/ # Data transfer
+          objects │ └── Validators/ # FluentValidation rules ├── LOCDS.DAL/ #
+          Data access layer │ ├── Repositories/ # Repository implementations │
+          ├── Database/ │ │ ├── LOCDS.ddl.sql # Schema creation │ │ └──
+          LOCDS.LoanOrigination.ddl.sql │ └── Abstractions/ # IUnitOfWork,
+          IRepository interfaces ├── LOCDS.Common/ # Shared utilities │ ├──
+          Enums/ │ ├── Exceptions/ │ └── Infrastructure/ # CorrelationContext
+          ├── LOCDS.Entities/ # Domain models └── LOCDS.Tests/ # NUnit test
+          suite ├── CreditScoringServiceTests.cs ├── UnderwritingServiceTests.cs
+          └── LoanOfferServiceTests.cs scripts/ └── deploy.ps1 # PowerShell
+          deployment script
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>📊 Key Features by Page</h2>
+        <table>
+          <tr>
+            <th>Page</th>
+            <th>Role</th>
+            <th>Key Features</th>
+          </tr>
+          <tr>
+            <td><strong>Login.aspx</strong></td>
+            <td>All Users</td>
+            <td>
+              Forms auth, CAPTCHA on failed attempts, OTP reset, account
+              lockout, session fixation prevention
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Dashboard.aspx</strong></td>
+            <td>Credit Officer</td>
+            <td>
+              Application list with filters, status tracking, bureau pull
+              trigger, underwriter assignment, Excel export
+            </td>
+          </tr>
+          <tr>
+            <td><strong>LoanApplication.aspx</strong></td>
+            <td>Applicant</td>
+            <td>
+              Multi-step form wizard, draft persistence, field validation,
+              document upload, applicant data masking
+            </td>
+          </tr>
+          <tr>
+            <td><strong>UnderwritingDecision.aspx</strong></td>
+            <td>Underwriter</td>
+            <td>
+              Bureau report review, FOIR/LTV calculation,
+              approval/rejection/review decision, manual override with
+              justification
+            </td>
+          </tr>
+          <tr>
+            <td><strong>LoanOffer.aspx</strong></td>
+            <td>Applicant</td>
+            <td>
+              EMI calculation, offer validity display, acceptance workflow,
+              email delivery
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div
+        class="section"
+        style="
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          text-align: center;
+        "
+      >
+        <h2 style="color: white; border-color: white">
+          ✨ Application Ready for Use
+        </h2>
+        <p style="font-size: 1.1em; margin: 20px 0">
+          All components have been implemented with enterprise-grade security,
+          error handling, logging, dependency injection, and testing.
+        </p>
+        <p>
+          <strong>Next Steps:</strong> Install prerequisites and follow the
+          setup instructions above to run the application on your machine.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

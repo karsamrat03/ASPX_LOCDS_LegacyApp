@@ -1,0 +1,41 @@
+# Visual Studio / .NET build outputs
+bin/
+obj/
+[Bb]uild/
+[Rr]elease/
+[Dd]ebug/
+TestResults/
+out/
+
+# User-specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Logs and diagnostics
+*.log
+*.tmp
+*.cache
+*.pid
+
+# ASP.NET generated folders
+LOCDS/LOCDS.Web/App_Data/Logs/
+
+# JetBrains / VS Code
+.idea/
+.vscode/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Optional: uncomment if you do not want to version demo backups
+# *.bak

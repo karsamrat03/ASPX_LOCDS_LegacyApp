@@ -1,0 +1,1 @@
+<%@ Application Language="C#" CodeFile="Global.asax.cs" Inherits="LOCDS.Web.Global" %>

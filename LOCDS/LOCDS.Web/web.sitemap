@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="~/Dashboard.aspx" title="Dashboard" description="LOCDS Dashboard">
+    <siteMapNode url="~/LoanApplication.aspx" title="Loan Application" description="Loan Application" />
+    <siteMapNode url="~/LoanOffer.aspx" title="Loan Offer" description="Loan Offer" />
+    <siteMapNode url="~/UnderwritingDecision.aspx" title="Underwriting Decision" description="Underwriting Decision" />
+    <siteMapNode url="~/DecisionSheet.aspx" title="Decision Sheet" description="Decision Sheet" />
+  </siteMapNode>
+</siteMap>

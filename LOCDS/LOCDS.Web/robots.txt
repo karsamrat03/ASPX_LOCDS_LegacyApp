@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /Errors/
+Disallow: /App_Data/
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml

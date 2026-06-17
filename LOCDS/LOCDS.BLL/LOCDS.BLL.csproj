@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LOCDS.Common\LOCDS.Common.csproj" />
+    <ProjectReference Include="..\LOCDS.DAL\LOCDS.DAL.csproj" />
+    <ProjectReference Include="..\LOCDS.Entities\LOCDS.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.10.0" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Polly" Version="7.2.4" />
+  </ItemGroup>
+
+</Project>
